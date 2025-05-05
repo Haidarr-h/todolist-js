@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./output.css" />
+    <title>To Do List App</title>
+  </head>
+  <body
+    class="font-jost bg-[url('./images/background.jpg')] bg-cover bg-no-repeat h-full min-h-screen bg-center"
+  >
+    <main class="flex items-center justify-center h-screen">
+      <div
+        class="flex flex-col items-center justify-center gap-[30px] text-white rounded-xl border p-[80px] shadow-2xl backdrop-blur-sm border-white max-w-[500px]"
+      >
+        <h1 class="text-4xl font-bold text-[#7e0030] drop-shadow-lg">
+          TO DO APP
+        </h1>
+        <form
+          action=""
+          class="flex gap-[10px] justify-between w-full items-center"
+        >
+          <input
+            type="text"
+            id="task-input"
+            placeholder="Add a new Task"
+            class="flex-1 text-black border-none p-[10px] text-[18px] font-light rounded-xl focus:outline-double bg-[#ffdcc8]"
+          />
+          <button
+            type="submit"
+            id="add-task-btn"
+            class="bg-[#ffdcc8] rounded-full my-auto py-1 px-2 text-black hover:bg-[#f1bea0] hover:scale-110 transition-all duration-300"
+          >
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </form>
+
+        <div>
+          <ul id="task-list" class="flex flex-col items-center"></ul>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/5058/5058432.png"
+            alt=""
+            class="max-w-[200px] h-auto"
+            id="emptyImage"
+          />
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script src="./script.js"></script>
+</html>
