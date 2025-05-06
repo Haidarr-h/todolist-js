@@ -14,13 +14,13 @@
     <title>To Do List App</title>
   </head>
   <body
-    class="font-jost bg-[url('./images/background.jpg')] bg-cover bg-no-repeat h-full min-h-screen bg-center"
+    class="font-jost bg-[url('./images/background.jpg')] bg-cover bg-no-repeat h-full bg-center"
   >
     <main class="flex items-center justify-center h-screen">
       <div
         class="flex flex-col items-center justify-center gap-[30px] text-white rounded-xl border p-[80px] shadow-2xl backdrop-blur-sm border-white max-w-[500px]"
       >
-        <h1 class="text-4xl font-bold text-[#7e0030] drop-shadow-lg">
+        <h1 class="text-4xl font-bold text-white drop-shadow-lg">
           TO DO APP
         </h1>
         <form
@@ -32,6 +32,7 @@
             id="task-input"
             placeholder="Add a new Task"
             class="flex-1 text-black border-none p-[10px] text-[18px] font-light rounded-xl focus:outline-double bg-[#ffdcc8]"
+            maxlength="30"
           />
           <button
             type="submit"
@@ -43,7 +44,7 @@
         </form>
 
         <div>
-          <ul id="task-list" class="flex flex-col items-center"></ul>
+          <ul id="task-list" class="flex flex-col items-center break-words max-w-sm"></ul>
           <img
             src="https://cdn-icons-png.flaticon.com/512/5058/5058432.png"
             alt=""

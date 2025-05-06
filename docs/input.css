@@ -1,22 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-    @apply m-0 p-0 box-border;
+  @apply m-0 p-0 box-border;
 }
 
 #task-list li {
-    @apply flex flex-row items-center justify-between bg-white bg-opacity-5 p-2 space-x-2 rounded-lg border relative hover:shadow-lg text-wrap;
+  @apply flex flex-row items-start justify-between bg-white bg-opacity-5 p-2 space-x-5 rounded-lg border relative hover:shadow-lg text-wrap w-full max-w-xl;
 }
 
 #task-list li .checkbox {
-    @apply appearance-none border-2 border-white rounded-full w-5 h-5 cursor-pointer checked:bg-blue-500;
+  @apply appearance-none border-2 border-white rounded-full w-5 h-5 cursor-pointer checked:bg-[#ff7e4a];
 }
 
 #task-list li span {
-    @apply flex-1 text-wrap;
+  @apply flex-1 text-wrap;
 }
 
+.completed {
+  @apply line-through opacity-80;
+}

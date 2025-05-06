@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
@@ -581,10 +581,6 @@ video {
   height: 100vh;
 }
 
-.min-h-screen{
-  min-height: 100vh;
-}
-
 .w-full{
   width: 100%;
 }
@@ -597,8 +593,16 @@ video {
   max-width: 500px;
 }
 
+.max-w-sm{
+  max-width: 24rem;
+}
+
 .flex-1{
   flex: 1 1 0%;
+}
+
+.flex-row{
+  flex-direction: row;
 }
 
 .flex-col{
@@ -623,6 +627,16 @@ video {
 
 .gap-\[30px\]{
   gap: 30px;
+}
+
+.space-x-2 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.break-words{
+  overflow-wrap: break-word;
 }
 
 .rounded-full{
@@ -757,15 +771,17 @@ video {
 #task-list li{
   position: relative;
   display: flex;
+  width: 100%;
+  max-width: 36rem;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
 #task-list li > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
-  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 #task-list li{
@@ -798,12 +814,17 @@ video {
 
 #task-list li .checkbox:checked{
   --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
+  background-color: rgb(255 126 74 / var(--tw-bg-opacity, 1));
 }
 
 #task-list li span{
   flex: 1 1 0%;
   text-wrap: wrap;
+}
+
+.completed{
+  text-decoration-line: line-through;
+  opacity: 0.8;
 }
 
 .hover\:scale-110:hover{
@@ -820,4 +841,3 @@ video {
 .focus\:outline-double:focus{
   outline-style: double;
 }
-
